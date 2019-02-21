@@ -42,7 +42,12 @@
 #
 # Copyright 2019 Your name here, unless otherwise noted.
 #
-class trialmodule {
-
+class trialmodule (
+  String $custom_message = "A default message",
+)
+{
+  notify { 'default': 
+    message => $custom_message,
+  }
 
 }
